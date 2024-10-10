@@ -1,7 +1,7 @@
 params.outdir = 'results'
 
 process MULTIQC {
-    conda 'bioconda::multiqc=1.25'
+    container '/hyu/public/test_repo2/rnaseq-nf:1.0'
     publishDir params.outdir, mode:'copy'
 
     input:

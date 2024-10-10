@@ -2,7 +2,7 @@ params.outdir = 'results'
 
 process FASTQC {
     tag "FASTQC on $sample_id"
-    conda 'bioconda::fastqc=0.12.1'
+    container '/hyu/public/test_repo2/rnaseq-nf:1.0'
     publishDir params.outdir, mode:'copy'
 
     input:

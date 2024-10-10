@@ -12,5 +12,8 @@ RUN \
       procps-ng \
    && micromamba clean -a -y
 
+COPY . /rnaseq-nf
+COPY bin/fastqc.sh /usr/bin
+
 ENV PATH="$MAMBA_ROOT_PREFIX/bin:$PATH"
 USER root

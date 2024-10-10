@@ -1,7 +1,7 @@
 
 process INDEX {
     tag "$transcriptome.simpleName"
-    conda 'bioconda::salmon=1.10.3'
+    container '/hyu/public/test_repo2/rnaseq-nf:1.0'
     
     input:
     path transcriptome 
